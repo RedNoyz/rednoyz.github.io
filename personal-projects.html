@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="ASSETS/favicon.ico">
 <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="The website of RedNoyz">
-        <title>RedNoyz</title>
-    <!-- BoxIcons v2.1.2 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <!-- Roboto Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website of RedNoyz" />
+  <link rel="icon" href="ASSETS/favicon.ico" />
+
+  <title>RedNoyz — Personal Projects</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="toggle">
-            <i class="bx bx-chevron-right"></i>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
+      <i class="bx bx-chevron-right" aria-hidden="true"></i>
+    </div>
+
+    <nav>
+      <div class="brand">
+        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-text">
+          <div class="brand-name">RedNoyz</div>
+          <div class="brand-sub">Quality Designer</div>
         </div>
-        <nav>
-            <div class="nav-title">
-            </div>
-            <ul>
-                <li class="nav-item active">
-                    <i class="bx bx-home"></i>
-                    <span><a href="index.html">Home</a></span>
-                </li>
-                <hr>
-                <li class="nav-item">
-                    <i class="bx bx-book-open"></i>
-                    <span><a href="roles-responsibilities.html">Roles and Responsibilities</a></span>
-                </li>
-            </ul>
-            <hr>
-            <ul>
-                <li class="nav-item">
-                    <i class="bx bxs-message-dots"></i>
-                    <span><a href="contact.html">Contact</a></span>
-                </li>
-            </ul>
-        </nav>
-    </div>
-<div class="main">
-<h1>WIP</h1>
-    </div>
-    <!-- JS File -->
-    <script type="text/javascript" src="JS/script.js"></script>
+      </div>
+
+      <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bx bx-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="personal-projects.html">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            <span>Personal Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="roles-responsibilities.html">
+            <i class="bx bx-book-open" aria-hidden="true"></i>
+            <span>Roles & Responsibilities</span>
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bx bxs-message-dots" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav> -->
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <h1 class="page-title">Personal Projects</h1>
+      <p class="page-subtitle muted">A curated list of tools, experiments, and builds.</p>
+    </header>
+
+    <section class="grid">
+      <section class="card">
+        <div class="card-header">
+          <h2>Work in progress</h2>
+          <p class="muted">This page is being built.</p>
+        </div>
+        <div class="card-body">
+          <p class="muted">
+            If you want, I can add a clean projects layout (cards, tags, GitHub links, status chips).
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">© <span id="year"></span> RedNoyz</span>
+    </footer>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

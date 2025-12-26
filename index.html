@@ -1,158 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="ASSETS/favicon.ico">
 <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="The website of RedNoyz">
-        <title>RedNoyz</title>
-    <!-- BoxIcons v2.1.2 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <!-- Roboto Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website of RedNoyz" />
+  <link rel="icon" href="ASSETS/favicon.ico" />
+
+  <title>RedNoyz</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="toggle">
-            <i class="bx bx-chevron-right"></i>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
+      <i class="bx bx-chevron-right" aria-hidden="true"></i>
+    </div>
+
+    <nav>
+      <div class="brand">
+        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-text">
+          <div class="brand-name">RedNoyz</div>
+          <div class="brand-sub">Sr QA Lead • QA Architect</div>
         </div>
-        <nav>
-            <div class="nav-title">
+      </div>
+
+      <ul class="nav-list" role="list">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="bx bx-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="personal-projects.html">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            <span>Personal Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="roles-responsibilities.html">
+            <i class="bx bx-book-open" aria-hidden="true"></i>
+            <span>Roles & Responsibilities</span>
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bx bxs-message-dots" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul> -->
+    </nav>
+  </aside>
+
+  <main class="main" id="content">
+    <header class="hero">
+      <div class="hero-inner">
+        <h1 class="title">Laurentiu Boboc</h1>
+        <p class="subtitle">Sr QA Lead at Fortis Games</p>
+        <p class="meta">Bucharest, Romania • QA Architect • Data-driven QA</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="roles-responsibilities.html">View roles & responsibilities</a>
+          <a class="btn" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <section class="card">
+        <div class="card-header">
+          <h2>Profile</h2>
+          <p class="muted">Links & snapshot</p>
+        </div>
+
+        <div class="card-body">
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-label muted">Email</div>
+              <a class="link" href="mailto:lp.boboc@gmail.com">lp.boboc@gmail.com</a>
             </div>
-            <ul>
-                <li class="nav-item active">
-                    <i class="bx bxl-github"></i>
-                    <span><a href="personal-projects.html">Personal Projects</a></span>
-                </li>
-                <li class="nav-item">
-                    <i class="bx bx-book-open"></i>
-                    <span><a href="roles-responsibilities.html">Roles and Responsibilities</a></span>
-                </li>
-            </ul>
-            <hr>
-            <ul>
-                <li class="nav-item">
-                    <i class="bx bxs-message-dots"></i>
-                    <span><a href="contact.html">Contact</a></span>
-                </li>
-            </ul>
-        </nav>
-    </div>
-<div class="main">
-        <br>
-        <br>
-        <br>
-        <h1 align="center" style="color:red">Laurentiu Boboc</h1>
-        <h2 align="center" style="color:red">RedNoyz</h2>
-        <p align="center"><em><strong>Quality Designer</strong></em></p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <hr size="3" noshade="" color="grey">
-        <br>
-        <p>
-            <a href="https://stackoverflow.com/users/19761952/rednoyz"><img src="https://stackoverflow.com/users/flair/19761952.png?theme=dark" width="208" height="58" alt="profile for RedNoyz at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for RedNoyz at Stack Overflow, Q&amp;A for professional and enthusiast programmers"></a>
-            <br>
-        </p>
-        <br>
-        <br>
-        <hr size="3" noshade="">
-<!--        <h3>Games and Projects</h3>-->
-<!--        <ul>-->
-<!--            <a href="https://worldofwarcraft.com/en-gb/character/eu/ravencrest/rednoyz" target="_blank"> -->
-<!--                <li>Wow</li> -->
-<!--            </a>-->
-<!--                <ul>-->
-<!--                    <li>WOTLK</li>-->
-<!--                    <li>Cataclysm</li>-->
-<!--                </ul>-->
-<!--            <li>-->
-<!--                <a href="https://www.leagueofgraphs.com/summoner/eune/RedNoyz" target="_blank">LoL</a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--            <hr size="3" noshade="">-->
-    <br>
-            <h3>Work Experince - Current Role</h3>
-            <table cellspacing="20">
-                <thead>
-                    <tr>
-                        <th>Dates</th>
-                        <th>Role</th>
-                        <th>Responsibilities</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr valign="top">
-                        <td>2020-2022</td>
-                        <td>Quality Designer</td>
-                        <td>
-                            <ul>
-                                <li>•Telemetry POD Lead on the QV side</li>
-                                <ul class="tab">
-                                    <li>    •Telemetry data consistency validation in BigQuery</li>
-                                    <li>    •Telemetry data investigation towards identifying steps to repro for live issues</li>
-                                    <li>    •Telemetry data testing coordination</li>
-                                    <li>    •Telemetry data test plan creation</li>
-                                </ul>
-                                <li>• Define and monitor quality metrics and Key Performance Indicators</li>
-                                <li>• Create and maintain Power BI reports </li>
-                                <li>• Collaborate with Data Analysts to innovate reports and data gathering</li>
-                                <li>• Owner of the EARO Data Driven Decisions pioneering group</li>
-                                <li>• Monitor Live Telemetry data to identify and understand user behavior</li>
-                                <li>• Drive efficiencies throughout the entire project by pioneering, improving and developing QA processes</li>
-                                <li>• Review & Implement processes and workflows on a project level</li>
-                                <li>• Successfully collaborating with Quality Designers across multiple projects to share knowledge and align on a business level </li>
-                                <li>• Increasing the efficiency of QV processes by leveraging automation, new tools and technologies</li>
-                                <li>• Using critical thinking techniques to research, synthesize and evaluate information</li>
-                                <li>• Defining test processes and documentation standards</li>
-                                <li>• Experience with extracting and manipulating data from:</li>
-                                <ul class="tab">
-                                    <li>• JIRA</li>
-                                    <li>• BigQuery</li>
-                                    <li>• TM4J/Zephyr</li>
-                                    <li>• Testrail</li>
-                                    <li>• Amazon Redshift </li>
-                                    <li>• Blackpearl</li>
-                                </ul>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr valign="top">
-                        <td></td>
-                        <td></td>
-                        <td>
-                        <a href="roles-responsibilities.html" style="color:lightblue">More details and the rest of the roles and responsibilities</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        <hr size="3" noshade="">
-            <br>
-        <h3>Skills</h3>
-            <table cellspacing="20">
-                <tr>
-                    <td>Testing</td>
-                    <td>⭐⭐⭐⭐⭐</td>
-                    <td>Test Case Creation</td>
-                    <td>⭐⭐⭐⭐⭐</td>
-                </tr>
-                <tr>
-                    <td>JIRA</td>
-                    <td>⭐⭐⭐⭐</td>
-                    <td>Power BI</td>
-                    <td>⭐⭐</td>
-                </tr>
-                <tr>
-                    <td>Python</td>
-                    <td>⭐</td>
-                    <td>SQL</td>
-                    <td>⭐⭐⭐</td>
-                </tr>
-            </table>
-    </div>
-    <!-- JS File -->
-    <script type="text/javascript" src="JS/script.js"></script>
+
+            <div class="contact-item">
+              <div class="contact-label muted">LinkedIn</div>
+              <a class="link" href="https://www.linkedin.com/in/laurentiu-boboc-bb324393/" target="_blank" rel="noreferrer noopener">
+                View profile →
+              </a>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+
+          <a href="https://stackoverflow.com/users/19761952/rednoyz" target="_blank" rel="noreferrer noopener">
+            <img
+              src="https://stackoverflow.com/users/flair/19761952.png?theme=dark"
+              width="208"
+              height="58"
+              alt="Stack Overflow profile flair"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Current role</h2>
+          <p class="muted">Fortis Games • Sr QA Lead (Feb 2024 – Present)</p>
+        </div>
+
+        <div class="card-body">
+          <ul class="bullets">
+            <li>Drive efficiencies by pioneering, improving, and developing QA processes</li>
+            <li>Partner with Dev and Production to improve product health and workflows</li>
+            <li>Automate daily activities with Python scripting</li>
+            <li>Validate stories and changes/implementations</li>
+            <li>Create and maintain test cases</li>
+            <li>Define test processes and documentation standards</li>
+            <li>Apply critical thinking to research, synthesize, and evaluate information</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="subsection">
+            <div class="sub-title">Previously</div>
+            <div class="tag-row">
+              <span class="tag">Fortis Games • Sr QA Analyst (Apr 2023 – Feb 2024)</span>
+              <span class="tag">EA • QA Architect (Jun 2020 – Mar 2023)</span>
+              <span class="tag">EA • Sr Quality Analyst (Jun 2018 – Jun 2020)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Skills</h2>
+          <p class="muted">Top strengths + data/BI tooling</p>
+        </div>
+
+        <div class="card-body">
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-row"><span>Test Management</span><span class="muted">Expert</span></div>
+              <div class="bar"><div class="fill" style="width: 92%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>Team Management</span><span class="muted">Strong</span></div>
+              <div class="bar"><div class="fill" style="width: 82%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>QA Test Planning & Processes</span><span class="muted">Expert</span></div>
+              <div class="bar"><div class="fill" style="width: 90%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>Power BI</span><span class="muted">Strong</span></div>
+              <div class="bar"><div class="fill" style="width: 72%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>SQL / BigQuery</span><span class="muted">Strong</span></div>
+              <div class="bar"><div class="fill" style="width: 70%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>Looker</span><span class="muted">Strong</span></div>
+              <div class="bar"><div class="fill" style="width: 68%"></div></div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-row"><span>Python (automation)</span><span class="muted">Intermediate</span></div>
+              <div class="bar"><div class="fill" style="width: 55%"></div></div>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+
+          <div class="subsection">
+            <div class="sub-title">Certification & languages</div>
+            <div class="tag-row">
+              <span class="tag">DAT207x: Analyzing and Visualizing Data with Power BI</span>
+              <span class="tag">Romanian</span>
+              <span class="tag">English</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">© <span id="year"></span> RedNoyz</span>
+    </footer>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

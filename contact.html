@@ -1,79 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="ASSETS/favicon.ico">
 <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="The website of RedNoyz">
-        <title>RedNoyz</title>
-    <!-- BoxIcons v2.1.2 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <!-- Roboto Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website of RedNoyz" />
+  <link rel="icon" href="ASSETS/favicon.ico" />
+
+  <title>RedNoyz — Contact</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="toggle">
-            <i class="bx bx-chevron-right"></i>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
+      <i class="bx bx-chevron-right" aria-hidden="true"></i>
+    </div>
+
+    <nav>
+      <div class="brand">
+        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-text">
+          <div class="brand-name">RedNoyz</div>
+          <div class="brand-sub">Quality Designer</div>
         </div>
-        <nav>
-            <div class="nav-title">
+      </div>
+
+      <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bx bx-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="personal-projects.html">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            <span>Personal Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="roles-responsibilities.html">
+            <i class="bx bx-book-open" aria-hidden="true"></i>
+            <span>Roles & Responsibilities</span>
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- <ul class="nav-list" role="list">
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">
+            <i class="bx bxs-message-dots" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul> -->
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <h1 class="page-title">Contact</h1>
+      <p class="page-subtitle muted">Let’s connect — fastest options below.</p>
+    </header>
+
+    <section class="grid">
+      <section class="card">
+        <div class="card-header">
+          <h2>Direct</h2>
+          <p class="muted">Quick ways to reach me</p>
+        </div>
+        <div class="card-body">
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-label muted">LinkedIn</div>
+              <a class="link" href="https://www.linkedin.com/in/laurentiu-boboc-bb324393/" target="_blank" rel="noreferrer noopener">
+                View profile →
+              </a>
             </div>
-            <ul>
-                <li class="nav-item active">
-                    <i class="bx bx-home"></i>
-                    <span><a href="index.html">Home</a></span>
-                </li>
-                <hr>
-                <li class="nav-item active">
-                    <i class="bx bxl-github"></i>
-                    <span><a href="personal-projects.html">Personal Projects</a></span>
-                </li>
-                <li class="nav-item">
-                    <i class="bx bx-book-open"></i>
-                    <span><a href="roles-responsibilities.html">Roles and Responsibilities</a></span>
-                </li>
-            </ul>
-            <hr>
-            <ul>
-                <li class="nav-item">
-                    <i class="bx bxs-message-dots"></i>
-                    <span><a href="contact.html">Contact</a></span>
-                </li>
-            </ul>
-        </nav>
-    </div>
-<div class="main">
-<h1>Contact Info</h1>
-    <hr>
-    <table cellpadding="10px">
-        <tr>
-            <td>LinkedIn</td>
-            <td><a href="https://www.linkedin.com/in/laurentiu-boboc-bb324393/" target="_blank">LinkedIn Profile</a></td>
-        </tr>
-        <tr>
-            <td>Mail</td>
-            <td>lp.boboc@gmail.com</td>
-        </tr>
-    <form class="" action="mailto:lp.boboc@gmail.com" method="post" enctype="text/plain">
-            <tr>
-                <td><label>Your Name:</label></td>
-                <td><input type="text" name="yourName" value=""></td>
-            </tr>
-            <tr>
-                <td><label>Your Email:</label></td>
-                <td><input type="email" name="yourEmail" value=""></td>
-            </tr>
-            <tr>
-                <td valign="top"><label>Your Message:</label></td>
-                <td><textarea name="yourMessage" rows="10" cols="50"></textarea></td>
-                <td valign="top"><input type="submit" name=""></td>
-            </tr>
-    </form>
-    </table>
-    </div>
-    <!-- JS File -->
-    <script type="text/javascript" src="JS/script.js"></script>
+
+            <div class="contact-item">
+              <div class="contact-label muted">Email</div>
+              <a class="link" href="mailto:lp.boboc@gmail.com">lp.boboc@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Message</h2>
+          <p class="muted">This uses your default mail client (mailto).</p>
+        </div>
+        <div class="card-body">
+          <form class="form" action="mailto:lp.boboc@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <label for="yourName" class="muted">Your name</label>
+              <input id="yourName" name="yourName" type="text" autocomplete="name" placeholder="Name" />
+            </div>
+
+            <div class="form-row">
+              <label for="yourEmail" class="muted">Your email</label>
+              <input id="yourEmail" name="yourEmail" type="email" autocomplete="email" placeholder="Email" />
+            </div>
+
+            <div class="form-row">
+              <label for="yourMessage" class="muted">Your message</label>
+              <textarea id="yourMessage" name="yourMessage" rows="8" placeholder="Write your message..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Send message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">© <span id="year"></span> RedNoyz</span>
+    </footer>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

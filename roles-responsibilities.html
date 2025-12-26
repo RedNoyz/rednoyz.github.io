@@ -1,102 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="ASSETS/favicon.ico">
 <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="The website of RedNoyz">
-        <title>RedNoyz</title>
-    <!-- BoxIcons v2.1.2 -->
-    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
-    <!-- Roboto Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The website of RedNoyz" />
+  <link rel="icon" href="ASSETS/favicon.ico" />
+
+  <title>RedNoyz — Roles & Responsibilities</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="toggle">
-            <i class="bx bx-chevron-right"></i>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
+      <i class="bx bx-chevron-right" aria-hidden="true"></i>
+    </div>
+
+    <nav>
+      <div class="brand">
+        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-text">
+          <div class="brand-name">RedNoyz</div>
+          <div class="brand-sub">Sr QA Lead • QA Architect</div>
         </div>
-        <nav>
-            <div class="nav-title">
+      </div>
+
+      <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bx bx-home" aria-hidden="true"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="personal-projects.html">
+            <i class="bx bxl-github" aria-hidden="true"></i>
+            <span>Personal Projects</span>
+          </a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link" href="roles-responsibilities.html">
+            <i class="bx bx-book-open" aria-hidden="true"></i>
+            <span>Roles & Responsibilities</span>
+          </a>
+        </li>
+      </ul>
+
+      <hr />
+
+      <!-- <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            <i class="bx bxs-message-dots" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul> -->
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="page-header">
+      <h1 class="page-title">Roles & Responsibilities</h1>
+      <p class="page-subtitle muted">A consolidated view of roles, scope, and impact.</p>
+    </header>
+
+    <section class="grid">
+      <!-- Fortis Games -->
+      <section class="card">
+        <div class="card-header">
+          <h2>Fortis Games</h2>
+          <p class="muted">Bucharest, Romania</p>
+        </div>
+
+        <div class="card-body">
+          <div class="experience">
+            <div class="experience-top">
+              <div>
+                <div class="experience-role">Sr QA Lead</div>
+                <div class="experience-company muted">Process ownership • Partner collaboration • QA standards</div>
+              </div>
+              <div class="chip">Feb 2024 – Present</div>
             </div>
-            <ul>
-                <li class="nav-item active">
-                    <i class="bx bx-home"></i>
-                    <span><a href="index.html">Home</a></span>
-                </li>
-                <hr>
-                <li class="nav-item active">
-                    <i class="bx bxl-github"></i>
-                    <span><a href="personal-projects.html">Personal Projects</a></span>
-                </li>
+
+            <ul class="bullets">
+              <li>Drive efficiencies by pioneering, improving, and developing QA processes</li>
+              <li>Collaborate with Dev and Production to maintain and improve product health and workflows</li>
+              <li>Automate daily activities with Python scripting</li>
+              <li>Validate stories and changes/implementations</li>
+              <li>Create and maintain test cases</li>
+              <li>Define test processes and documentation standards</li>
+              <li>Use critical thinking to research, synthesize, and evaluate information</li>
             </ul>
-            <hr>
-            <ul>
-                <li class="nav-item">
-                    <i class="bx bxs-message-dots"></i>
-                    <span><a href="contact.html">Contact</a></span>
-                </li>
+
+            <div class="spacer"></div>
+
+            <div class="experience-top">
+              <div>
+                <div class="experience-role">Sr QA Analyst</div>
+                <div class="experience-company muted">Quality execution • Story validation • Test coverage</div>
+              </div>
+              <div class="chip">Apr 2023 – Feb 2024</div>
+            </div>
+
+            <ul class="bullets">
+              <li>Validate changes and implementations, ensure release readiness</li>
+              <li>Create and maintain test cases and documentation</li>
+              <li>Support process improvements and QA standards adoption</li>
             </ul>
-        </nav>
-    </div>
-<div class="main">
-            <h1 align="center">Work Experince</h1>
-        <hr>
-            <table cellspacing="20">
-                <thead>
-                    <tr>
-                        <th>Dates</th>
-                        <th>Work</th>
-                        <th>Responsibilities</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr valign="top">
-                        <td>2020-2022</td>
-                        <td>Quality Designer</td>
-                        <td>
-                            <ul>
-                                <li>Telemetry POD Lead on the QV side</li>
-                                <ul>
-                                    <li>Telemetry data consistency validation in BigQuery</li>
-                                    <li>Telemetry data investigation towards identifying steps to repro for live issues</li>
-                                    <li>Telemetry data testing coordination</li>
-                                    <li>Telemetry data test plan creation</li>
-                                </ul>
-                                <li>Define and monitor quality metrics and Key Performance Indicators</li>
-                                <li>Create and maintain Power BI reports </li>
-                                <li>Collaborate with Data Analysts to innovate reports and data gathering</li>
-                                <li>Owner of the EARO Data Driven Decisions pioneering group</li>
-                                <li>Monitor Live Telemetry data to identify and understand user behavior</li>
-                                <li>Drive efficiencies throughout the entire project by pioneering, improving and developing QA processes</li>
-                                <li>Review & Implement processes and workflows on a project level</li>
-                                <li>Successfully collaborating with Quality Designers across multiple projects to share knowledge and align on a business level </li>
-                                <li>Increasing the efficiency of QV processes by leveraging automation, new tools and technologies</li>
-                                <li>Using critical thinking techniques to research, synthesize and evaluate information</li>
-                                <li>Defining test processes and documentation standards</li>
-                                <li>Experience with extracting and manipulating data from:</li>
-                                <ul>
-                                    <li>JIRA</li>
-                                    <li>BigQuery</li>
-                                    <li>TM4J/Zephyr</li>
-                                    <li>Testrail</li>
-                                    <li>Amazon Redshift </li>
-                                    <li>Blackpearl</li>
-                                </ul>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr valign="top">
-                        <td></td>
-                        <td></td>
-                        <td>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-    </div>
-    <!-- JS File -->
-    <script type="text/javascript" src="JS/script.js"></script>
+          </div>
+        </div>
+      </section>
+
+      <!-- Electronic Arts -->
+      <section class="card">
+        <div class="card-header">
+          <h2>Electronic Arts (EA)</h2>
+          <p class="muted">Bucharest, Romania</p>
+        </div>
+
+        <div class="card-body">
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">QA Architect</div>
+              <div class="experience-company muted">Data-driven QA • Metrics • Leadership</div>
+            </div>
+            <div class="chip">Jun 2020 – Mar 2023</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Define and monitor quality metrics and KPIs</li>
+            <li>Automate daily activities with Python scripting</li>
+            <li>Create and maintain Power BI reports</li>
+            <li>Collaborate with Data Analysts to innovate reports and data gathering</li>
+            <li>QA Owner for Telemetry validation (functionality, data quality, consistency)</li>
+            <li>Validate large-scale telemetry consistency via SQL in Google BigQuery</li>
+            <li>POD Lead over monetization and player retention features</li>
+            <li>Lead and coordinate a team of analysts and testers</li>
+            <li>Department-level peer mentoring</li>
+            <li>Experience working with: Jira, BigQuery, TM4J/Zephyr, TestRail, Amazon Redshift</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">Sr Quality Analyst</div>
+              <div class="experience-company muted">Metrics • Reporting • Telemetry monitoring</div>
+            </div>
+            <div class="chip">Jun 2018 – Jun 2020</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Define and monitor quality metrics and KPIs</li>
+            <li>Create and maintain Power BI reports</li>
+            <li>Collaborate with Data Analysts on reporting and data gathering</li>
+            <li>Monitor live telemetry data to understand user behavior</li>
+            <li>Drive efficiency through process improvements, tooling, and automation</li>
+            <li>Define test processes and documentation standards</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">DevQA Quality Analyst II</div>
+              <div class="experience-company muted">Tools testing • SQL/DB updates • Exec reporting</div>
+            </div>
+            <div class="chip">Sep 2017 – Jun 2018</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Create sprint/milestone status reports for executive visibility</li>
+            <li>Create XML-based test content for QA</li>
+            <li>Plan and coordinate qualitative feedback sessions + report outcomes</li>
+            <li>Create KPI reports for project visibility</li>
+            <li>Primary QA owner for web live content tools and features</li>
+            <li>Run SQL queries and perform DB changes to cover tool gaps</li>
+            <li>Work in agile with Dev team and perform pre-integration testing</li>
+            <li>Create test briefs based on feature briefs</li>
+            <li>Peer mentoring for new DevQA employees</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">DevQA Quality Analyst I</div>
+              <div class="experience-company muted">Web live tools • Telemetry ownership • Test planning</div>
+            </div>
+            <div class="chip">Jul 2015 – Sep 2017</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Create sprint/milestone status reports for executive visibility</li>
+            <li>Primary QA owner for web live content tools and features</li>
+            <li>Run SQL queries and perform DB changes when tools were unavailable</li>
+            <li>Pre-integration testing on newly introduced features</li>
+            <li>Test plan creation for telemetry events assigned by Production</li>
+            <li>Peer mentoring and feedback on feature/design proposals</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">QA Tester II</div>
+              <div class="experience-company muted">Test planning • Mentoring • Reporting</div>
+            </div>
+            <div class="chip">Feb 2015 – Jul 2015</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Create/edit test plans based on new features and design documents</li>
+            <li>Mentor and supervise testers (including task assignment during PTO coverage)</li>
+            <li>Bug regression and verify sweeps to ensure safe changes</li>
+            <li>Daily status reporting with testing progress and project overview</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="experience-top">
+            <div>
+              <div class="experience-role">QA Tester</div>
+              <div class="experience-company muted">Foundational QA execution</div>
+            </div>
+            <div class="chip">May 2013 – Feb 2015</div>
+          </div>
+
+          <ul class="bullets">
+            <li>Functional testing, issue identification, and verification support</li>
+          </ul>
+
+          <div class="spacer"></div>
+
+          <div class="subsection">
+            <div class="sub-title">Core strengths</div>
+            <div class="tag-row">
+              <span class="tag">Test Management</span>
+              <span class="tag">Team Management</span>
+              <span class="tag">QA Test Planning</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Looker</span>
+              <span class="tag">SQL / BigQuery</span>
+              <span class="tag">Python automation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">© <span id="year"></span> RedNoyz</span>
+    </footer>
+  </main>
+
+  <script src="JS/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
