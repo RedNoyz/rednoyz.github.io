@@ -452,3 +452,54 @@ textarea{ resize: vertical; }
   display: flex;
   justify-content: flex-end;
 }
+
+/* ---------- Hero identity (top block) ---------- */
+.hero-identity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.profile-photo{
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  margin-bottom: 6px;
+}
+
+.hero-identity .title{
+  margin: 0;
+}
+
+.hero-identity .subtitle{
+  margin: 4px 0 0;
+}
+
+.hero-identity .meta{
+  margin: 6px 0 0;
+  max-width: 520px;
+}
+
+/* Responsive */
+@media (max-width: 520px){
+  .profile-photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+  }
+}
+.hero-actions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
