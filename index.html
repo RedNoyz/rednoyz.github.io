@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The website of RedNoyz" />
+  <meta name="description" content="The website of RedNoyz — Sr QA Lead, QA Architect, data-driven QA." />
   <link rel="icon" href="ASSETS/favicon.ico" />
 
   <title>RedNoyz</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 
 <body>
+  <div class="noise" aria-hidden="true"></div>
+
   <aside class="sidebar" aria-label="Primary navigation">
     <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
       <i class="bx bx-chevron-right" aria-hidden="true"></i>
@@ -21,7 +25,7 @@
 
     <nav>
       <div class="brand">
-        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-mark" aria-hidden="true">RN</div>
         <div class="brand-text">
           <div class="brand-name">RedNoyz</div>
           <div class="brand-sub">Sr QA Lead • QA Architect</div>
@@ -46,71 +50,130 @@
         <li class="nav-item">
           <a class="nav-link" href="roles-responsibilities.html">
             <i class="bx bx-book-open" aria-hidden="true"></i>
-            <span>Roles & Responsibilities</span>
+            <span>Roles &amp; Responsibilities</span>
           </a>
         </li>
       </ul>
 
       <hr />
-
-      <!-- <ul class="nav-list" role="list">
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">
-            <i class="bx bxs-message-dots" aria-hidden="true"></i>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul> -->
     </nav>
   </aside>
 
   <main class="main" id="content">
-<div class="hero-inner">
-  <div class="hero-identity">
-    <!-- <img
-      class="profile-photo"
-      src="https://media.licdn.com/dms/image/v2/C4D03AQF4iaV3tBjvCg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1620746428672?e=1768435200&v=beta&t=AUvsd1LtltwVBKkd6YW3ZgGtYRPH9YWQ23TrQStOgqc"
-      alt="Laurentiu Boboc profile photo"
-      loading="lazy"
-    /> -->
 
-    <h1 class="title">Laurentiu Boboc</h1>
-    <p class="subtitle">Sr QA Lead at Fortis Games</p>
-    <p class="meta">Bucharest, Romania • QA Architect • Data-driven QA</p>
-  </div>
+    <!-- Hero -->
+    <div class="hero-inner">
+      <div class="hero-identity">
+        <div class="avatar-frame">
+          <img
+            class="profile-photo"
+            src="ASSETS/avatar1.jpeg"
+            alt="Laurentiu Boboc avatar"
+          />
+        </div>
 
-  <div class="hero-actions">
-    <a class="btn btn-ghost" href="roles-responsibilities.html">
-      View roles & responsibilities
-    </a>
-  </div>
-</div>
+        <span class="status-pill">
+          <span class="dot" aria-hidden="true"></span>
+          Available for chats
+        </span>
 
+        <h1 class="title">Laurentiu Boboc</h1>
+        <p class="subtitle">Sr QA Lead at Fortis Games</p>
+        <p class="meta">Bucharest, Romania • QA Architect • Data-driven QA</p>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="roles-responsibilities.html">
+          <i class="bx bx-book-open" aria-hidden="true"></i>
+          View career timeline
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/laurentiu-boboc-bb324393/" target="_blank" rel="noreferrer noopener">
+          <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <section class="stats" aria-label="Career snapshot">
+      <div class="stat-card">
+        <div class="stat-num">13+</div>
+        <div class="stat-label">Years in QA</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Roles held</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2</div>
+        <div class="stat-label">AAA studios</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Bugs squashed</div>
+      </div>
+    </section>
+
+    <!-- What I do -->
     <section class="grid">
-      <section class="card">
+      <section class="card span-12">
+        <div class="card-header">
+          <h2>What I do</h2>
+          <p class="muted">Where I add the most value</p>
+        </div>
+        <div class="card-body">
+          <div class="services">
+            <div class="service">
+              <div class="service-icon"><i class="bx bx-clipboard" aria-hidden="true"></i></div>
+              <h3>Test Process Design</h3>
+              <p class="muted">Build the rituals, docs, and templates that scale QA across teams and releases.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon"><i class="bx bx-data" aria-hidden="true"></i></div>
+              <h3>Telemetry &amp; Data QA</h3>
+              <p class="muted">Validate event consistency at scale via SQL/BigQuery — own data quality end-to-end.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i></div>
+              <h3>Reporting &amp; BI</h3>
+              <p class="muted">Power BI &amp; Looker dashboards that turn QA signal into stakeholder decisions.</p>
+            </div>
+            <div class="service">
+              <div class="service-icon"><i class="bx bx-bot" aria-hidden="true"></i></div>
+              <h3>Automation &amp; Tooling</h3>
+              <p class="muted">Python scripts that take the manual chore out of the daily QA loop.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile -->
+      <section class="card span-4">
         <div class="card-header">
           <h2>Profile</h2>
-          <p class="muted">Links & snapshot</p>
+          <p class="muted">Links &amp; snapshot</p>
         </div>
 
         <div class="card-body">
           <div class="contact-list">
-            <div class="contact-item">
-              <div class="contact-label muted">Email</div>
-              <!-- <a class="link" href="mailto:lp.boboc@gmail.com">lp.boboc@gmail.com</a> -->
-            </div>
-
             <div class="contact-item">
               <div class="contact-label muted">LinkedIn</div>
               <a class="link" href="https://www.linkedin.com/in/laurentiu-boboc-bb324393/" target="_blank" rel="noreferrer noopener">
                 View profile →
               </a>
             </div>
+
+            <div class="contact-item">
+              <div class="contact-label muted">Stack Overflow</div>
+              <a class="link" href="https://stackoverflow.com/users/19761952/rednoyz" target="_blank" rel="noreferrer noopener">
+                Open profile →
+              </a>
+            </div>
           </div>
 
           <div class="spacer"></div>
 
-          <a href="https://stackoverflow.com/users/19761952/rednoyz" target="_blank" rel="noreferrer noopener">
+          <a class="so-flair" href="https://stackoverflow.com/users/19761952/rednoyz" target="_blank" rel="noreferrer noopener">
             <img
               src="https://stackoverflow.com/users/flair/19761952.png?theme=dark"
               width="208"
@@ -122,7 +185,8 @@
         </div>
       </section>
 
-      <section class="card">
+      <!-- Current role -->
+      <section class="card span-8">
         <div class="card-header">
           <h2>Current role</h2>
           <p class="muted">Fortis Games • Sr QA Lead (Feb 2024 - Present)</p>
@@ -152,7 +216,8 @@
         </div>
       </section>
 
-      <section class="card">
+      <!-- Skills -->
+      <section class="card span-12">
         <div class="card-header">
           <h2>Skills</h2>
           <p class="muted">Top strengths + data/BI tooling</p>
@@ -162,46 +227,46 @@
           <div class="skills">
             <div class="skill">
               <div class="skill-row"><span>Test Management</span><span class="muted">Expert</span></div>
-              <div class="bar"><div class="fill" style="width: 100%"></div></div>
+              <div class="bar"><div class="fill" data-target="100%"></div></div>
             </div>
 
             <div class="skill">
               <div class="skill-row"><span>Team Management</span><span class="muted">Strong</span></div>
-              <div class="bar"><div class="fill" style="width: 90%"></div></div>
+              <div class="bar"><div class="fill" data-target="90%"></div></div>
             </div>
 
             <div class="skill">
-              <div class="skill-row"><span>QA Test Planning & Processes</span><span class="muted">Expert</span></div>
-              <div class="bar"><div class="fill" style="width: 100%"></div></div>
+              <div class="skill-row"><span>QA Test Planning &amp; Processes</span><span class="muted">Expert</span></div>
+              <div class="bar"><div class="fill" data-target="100%"></div></div>
             </div>
 
             <div class="skill">
               <div class="skill-row"><span>Power BI</span><span class="muted">Strong</span></div>
-              <div class="bar"><div class="fill" style="width: 75%"></div></div>
+              <div class="bar"><div class="fill" data-target="75%"></div></div>
             </div>
 
             <div class="skill">
               <div class="skill-row"><span>SQL / BigQuery</span><span class="muted">Strong</span></div>
-              <div class="bar"><div class="fill" style="width: 70%"></div></div>
+              <div class="bar"><div class="fill" data-target="70%"></div></div>
             </div>
 
             <div class="skill">
               <div class="skill-row"><span>Looker</span><span class="muted">Strong</span></div>
-              <div class="bar"><div class="fill" style="width: 65%"></div></div>
+              <div class="bar"><div class="fill" data-target="65%"></div></div>
             </div>
 
             <div class="skill">
               <div class="skill-row"><span>Python (automation)</span><span class="muted">Intermediate</span></div>
-              <div class="bar"><div class="fill" style="width: 55%"></div></div>
+              <div class="bar"><div class="fill" data-target="55%"></div></div>
             </div>
           </div>
 
           <div class="spacer"></div>
 
           <div class="subsection">
-            <div class="sub-title">Certification & languages</div>
+            <div class="sub-title">Certification &amp; languages</div>
             <div class="tag-row">
-              <span class="tag"><a href="https://courses.edx.org/certificates/a02c1320cf424d4fb23c2f0e02b7a656" target="_blank">DAT207x: Analyzing and Visualizing Data with Power BI</a></span>
+              <span class="tag"><a href="https://courses.edx.org/certificates/a02c1320cf424d4fb23c2f0e02b7a656" target="_blank" rel="noreferrer noopener">DAT207x: Analyzing and Visualizing Data with Power BI</a></span>
               <span class="tag">Romanian</span>
               <span class="tag">English</span>
             </div>
@@ -210,14 +275,54 @@
       </section>
     </section>
 
+    <!-- Tech marquee -->
+    <section class="marquee" aria-label="Tools and tech">
+      <div class="marquee-track" aria-hidden="true">
+        <span class="marquee-item"><i class="bx bx-cube"></i>Jira</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-data"></i>BigQuery</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-test-tube"></i>TestRail</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-test-tube"></i>TM4J / Zephyr</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-bar-chart-alt-2"></i>Power BI</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-pie-chart-alt-2"></i>Looker</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-data"></i>Amazon Redshift</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bxl-python"></i>Python</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-terminal"></i>SQL</span>
+        <span class="marquee-item sep">·</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item"><i class="bx bx-cube"></i>Jira</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-data"></i>BigQuery</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-test-tube"></i>TestRail</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-test-tube"></i>TM4J / Zephyr</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-bar-chart-alt-2"></i>Power BI</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-pie-chart-alt-2"></i>Looker</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-data"></i>Amazon Redshift</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bxl-python"></i>Python</span>
+        <span class="marquee-item sep">·</span>
+        <span class="marquee-item"><i class="bx bx-terminal"></i>SQL</span>
+        <span class="marquee-item sep">·</span>
+      </div>
+    </section>
+
     <footer class="footer">
-      <span class="muted">© <span id="year"></span> RedNoyz</span>
+      © <span id="year"></span> RedNoyz — crafted with care.
     </footer>
   </main>
 
   <script src="JS/script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

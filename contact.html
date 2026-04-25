@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The website of RedNoyz" />
+  <meta name="description" content="Contact RedNoyz — fastest ways to get in touch." />
   <link rel="icon" href="ASSETS/favicon.ico" />
 
   <title>RedNoyz — Contact</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 
 <body>
+  <div class="noise" aria-hidden="true"></div>
+
   <aside class="sidebar" aria-label="Primary navigation">
     <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
       <i class="bx bx-chevron-right" aria-hidden="true"></i>
@@ -21,10 +25,10 @@
 
     <nav>
       <div class="brand">
-        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-mark" aria-hidden="true">RN</div>
         <div class="brand-text">
           <div class="brand-name">RedNoyz</div>
-          <div class="brand-sub">Quality Designer</div>
+          <div class="brand-sub">Sr QA Lead • QA Architect</div>
         </div>
       </div>
 
@@ -46,21 +50,12 @@
         <li class="nav-item">
           <a class="nav-link" href="roles-responsibilities.html">
             <i class="bx bx-book-open" aria-hidden="true"></i>
-            <span>Roles & Responsibilities</span>
+            <span>Roles &amp; Responsibilities</span>
           </a>
         </li>
       </ul>
 
       <hr />
-
-      <!-- <ul class="nav-list" role="list">
-        <li class="nav-item active">
-          <a class="nav-link" href="contact.html">
-            <i class="bx bxs-message-dots" aria-hidden="true"></i>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul> -->
     </nav>
   </aside>
 
@@ -71,7 +66,7 @@
     </header>
 
     <section class="grid">
-      <section class="card">
+      <section class="card span-6">
         <div class="card-header">
           <h2>Direct</h2>
           <p class="muted">Quick ways to reach me</p>
@@ -93,7 +88,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="card span-6">
         <div class="card-header">
           <h2>Message</h2>
           <p class="muted">This uses your default mail client (mailto).</p>
@@ -116,7 +111,10 @@
             </div>
 
             <div class="form-actions">
-              <button class="btn" type="submit">Send message</button>
+              <button class="btn btn-primary" type="submit">
+                <i class="bx bx-send" aria-hidden="true"></i>
+                Send message
+              </button>
             </div>
           </form>
         </div>
@@ -124,13 +122,10 @@
     </section>
 
     <footer class="footer">
-      <span class="muted">© <span id="year"></span> RedNoyz</span>
+      © <span id="year"></span> RedNoyz — crafted with care.
     </footer>
   </main>
 
   <script src="JS/script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="The website of RedNoyz" />
+  <meta name="description" content="Personal projects by RedNoyz — tools, experiments, and builds." />
   <link rel="icon" href="ASSETS/favicon.ico" />
 
   <title>RedNoyz — Personal Projects</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 
 <body>
+  <div class="noise" aria-hidden="true"></div>
+
   <aside class="sidebar" aria-label="Primary navigation">
     <div class="toggle" role="button" aria-label="Toggle sidebar" tabindex="0">
       <i class="bx bx-chevron-right" aria-hidden="true"></i>
@@ -21,10 +25,10 @@
 
     <nav>
       <div class="brand">
-        <!-- <div class="brand-mark" aria-hidden="true">RN</div> -->
+        <div class="brand-mark" aria-hidden="true">RN</div>
         <div class="brand-text">
           <div class="brand-name">RedNoyz</div>
-          <div class="brand-sub">Quality Designer</div>
+          <div class="brand-sub">Sr QA Lead • QA Architect</div>
         </div>
       </div>
 
@@ -46,50 +50,110 @@
         <li class="nav-item">
           <a class="nav-link" href="roles-responsibilities.html">
             <i class="bx bx-book-open" aria-hidden="true"></i>
-            <span>Roles & Responsibilities</span>
+            <span>Roles &amp; Responsibilities</span>
           </a>
         </li>
       </ul>
 
       <hr />
-
-      <!-- <ul class="nav-list" role="list">
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">
-            <i class="bx bxs-message-dots" aria-hidden="true"></i>
-            <span>Contact</span>
-          </a>
-        </li>
-      </ul>
-    </nav> -->
+    </nav>
   </aside>
 
   <main class="main">
     <header class="page-header">
       <h1 class="page-title">Personal Projects</h1>
-      <p class="page-subtitle muted">A curated list of tools, experiments, and builds.</p>
+      <p class="page-subtitle muted">A curated list of tools, experiments, and builds — most are works in progress.</p>
     </header>
 
-    <section class="grid">
-      <section class="card">
-        <div class="card-header">
-          <h2>Work in progress</h2>
-          <p class="muted">This page is being built.</p>
+    <section class="project-grid">
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-pulse" aria-hidden="true"></i></div>
+          <span class="status-chip in-progress">In progress</span>
         </div>
-        <div class="card-body">
+        <h3 class="project-title">Test Pulse</h3>
+        <p class="project-desc">Lightweight Python toolkit that turns Jira + TM4J data into a daily QA-health snapshot delivered to Slack.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">Jira API</span>
+          <span class="tag">Slack</span>
+        </div>
+      </article>
 
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-data" aria-hidden="true"></i></div>
+          <span class="status-chip planned">Planned</span>
         </div>
-      </section>
+        <h3 class="project-title">Telemetry Sentinel</h3>
+        <p class="project-desc">SQL-driven validator that flags drift, schema breaks, and missing events across BigQuery telemetry tables.</p>
+        <div class="tag-row">
+          <span class="tag">BigQuery</span>
+          <span class="tag">SQL</span>
+          <span class="tag">dbt</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i></div>
+          <span class="status-chip exploring">Exploring</span>
+        </div>
+        <h3 class="project-title">QA Compass</h3>
+        <p class="project-desc">Power BI dashboard template kit — opinionated visuals for bug flow, release readiness, and team capacity.</p>
+        <div class="tag-row">
+          <span class="tag">Power BI</span>
+          <span class="tag">DAX</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-bot" aria-hidden="true"></i></div>
+          <span class="status-chip in-progress">In progress</span>
+        </div>
+        <h3 class="project-title">Triage Bot</h3>
+        <p class="project-desc">Small CLI that auto-labels and routes incoming bug reports based on title, repro, and component heuristics.</p>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">LLM</span>
+          <span class="tag">CLI</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-grid-alt" aria-hidden="true"></i></div>
+          <span class="status-chip exploring">Exploring</span>
+        </div>
+        <h3 class="project-title">Release Radar</h3>
+        <p class="project-desc">Looker block library for live-ops teams — release-by-release deltas in retention, monetization, and crash rate.</p>
+        <div class="tag-row">
+          <span class="tag">Looker</span>
+          <span class="tag">LookML</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <div class="project-icon"><i class="bx bx-globe" aria-hidden="true"></i></div>
+          <span class="status-chip in-progress">In progress</span>
+        </div>
+        <h3 class="project-title">rednoyz.github.io</h3>
+        <p class="project-desc">This very site — a hand-built static portfolio. Iterating on visuals, copy, and structure in public.</p>
+        <div class="tag-row">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JS</span>
+        </div>
+      </article>
     </section>
 
     <footer class="footer">
-      <span class="muted">© <span id="year"></span> RedNoyz</span>
+      © <span id="year"></span> RedNoyz — crafted with care.
     </footer>
   </main>
 
   <script src="JS/script.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
