@@ -123,6 +123,12 @@ a:hover{ color: var(--accent-3); }
 }
 .sidebar.open{ width: var(--sidebar-open); }
 
+/* Suppress transitions during initial state restore to avoid load flash */
+.sidebar.no-anim,
+.sidebar.no-anim *{
+  transition: none !important;
+}
+
 .sidebar nav{
   padding: 22px 14px;
   height: 100%;
@@ -231,32 +237,43 @@ a:hover{ color: var(--accent-3); }
 }
 .nav-item.active .nav-link i{ color: #ff8295; }
 
-/* Toggle */
+/* Toggle — floating circle on the sidebar's right edge */
 .sidebar .toggle{
+  appearance: none;
   cursor: pointer;
   position: absolute;
-  top: 92px;
-  right: -18px;
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
+  top: 28px;
+  right: -22px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  z-index: 12;
   display: grid;
   place-items: center;
+  border-radius: 999px;
   background: linear-gradient(180deg, #1a2030 0%, #11161f 100%);
   border: 1px solid var(--border-strong);
   box-shadow: 0 10px 22px -8px rgba(0,0,0,.65);
-  transition: transform .2s ease, border-color .2s ease;
+  color: rgba(255,255,255,.88);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
 }
 .sidebar .toggle:hover{
-  border-color: rgba(255,59,84,.45);
+  border-color: rgba(255,59,84,.55);
+  background: linear-gradient(180deg, #1f2638 0%, #141a26 100%);
   transform: translateY(-1px);
+}
+.sidebar .toggle:focus-visible{
+  outline: 2px solid rgba(255,59,84,.55);
+  outline-offset: 3px;
 }
 .sidebar .toggle i{
   font-size: 22px;
   transition: transform .35s var(--easing);
-  color: rgba(255,255,255,.85);
+  color: inherit;
 }
 .sidebar.open .toggle i{ transform: rotate(180deg); }
+/* Label is hidden — circle button only shows the chevron */
+.sidebar .toggle .toggle-label{ display: none; }
 
 /* =========================================================
    Main

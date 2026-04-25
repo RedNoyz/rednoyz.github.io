@@ -1,27 +1,39 @@
 /* ---------- Sidebar ---------- */
 const sidebar  = document.querySelector('.sidebar');
-const toggle   = document.querySelector('.sidebar .toggle');
+const toggle   = sidebar ? sidebar.querySelector('.toggle') : null;
 const STORE_KEY = 'rednoyz:sidebar';
 
+const readState  = () => { try { return localStorage.getItem(STORE_KEY); } catch (_) { return null; } };
+const writeState = (val) => { try { localStorage.setItem(STORE_KEY, val); } catch (_) {} };
+
 if (sidebar) {
-  /* Restore persisted state (desktop only — mobile is a dock) */
-  if (localStorage.getItem(STORE_KEY) === 'open') {
-    sidebar.classList.add('open');
+  const setOpen = (open) => {
+    sidebar.classList.toggle('open', open);
+    if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    writeState(open ? 'open' : 'closed');
+  };
+
+  /* Apply persisted state without first-paint animation */
+  if (readState() === 'open') {
+    sidebar.classList.add('no-anim', 'open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => sidebar.classList.remove('no-anim'));
+    });
   }
 
   if (toggle) {
-    const setOpen = (open) => {
-      sidebar.classList.toggle('open', open);
-      try { localStorage.setItem(STORE_KEY, open ? 'open' : 'closed'); } catch (_) {}
-    };
-    toggle.addEventListener('click', () => setOpen(!sidebar.classList.contains('open')));
-    toggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        setOpen(!sidebar.classList.contains('open'));
-      }
+    toggle.addEventListener('click', () => {
+      setOpen(!sidebar.classList.contains('open'));
     });
   }
+
+  /* Esc to close */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+      setOpen(false);
+    }
+  });
 }
 
 /* Mark active nav item from current URL */
