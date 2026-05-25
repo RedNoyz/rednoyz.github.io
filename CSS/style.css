@@ -237,6 +237,140 @@ a:hover{ color: var(--accent-3); }
 }
 .nav-item.active .nav-link i{ color: #ff8295; }
 
+/* Secret link — Reverse Turing easter egg (terminal-green HUD) */
+.nav-item-secret .nav-link{
+  font-family: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+.nav-item-secret .nav-link i{
+  color: #6ee7b7;
+  text-shadow:
+    0 0 6px rgba(110,231,183,.55),
+    0 0 14px rgba(34,197,94,.35);
+  animation: nav-secret-flicker 5.5s ease-in-out infinite;
+  transition: transform .25s var(--easing), color .25s ease, text-shadow .25s ease;
+  position: relative;
+  z-index: 2;
+}
+.nav-item-secret .nav-link span{
+  color: rgba(167,243,208,.86);
+  position: relative;
+  z-index: 2;
+  transition: color .2s ease, letter-spacing .25s var(--easing);
+}
+
+/* HUD corner brackets — drawn from 4 corners with stacked gradients */
+.nav-item-secret .nav-link::before{
+  content:"";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to right,  #6ee7b7 0 10px, transparent 10px) top left / 10px 1px no-repeat,
+    linear-gradient(to bottom, #6ee7b7 0 10px, transparent 10px) top left / 1px 10px no-repeat,
+    linear-gradient(to left,   #6ee7b7 0 10px, transparent 10px) top right / 10px 1px no-repeat,
+    linear-gradient(to bottom, #6ee7b7 0 10px, transparent 10px) top right / 1px 10px no-repeat,
+    linear-gradient(to right,  #6ee7b7 0 10px, transparent 10px) bottom left / 10px 1px no-repeat,
+    linear-gradient(to top,    #6ee7b7 0 10px, transparent 10px) bottom left / 1px 10px no-repeat,
+    linear-gradient(to left,   #6ee7b7 0 10px, transparent 10px) bottom right / 10px 1px no-repeat,
+    linear-gradient(to top,    #6ee7b7 0 10px, transparent 10px) bottom right / 1px 10px no-repeat;
+  opacity: 0;
+  transform: scale(.92);
+  filter: drop-shadow(0 0 4px rgba(110,231,183,.7));
+  transition: opacity .25s ease, transform .3s var(--easing);
+  z-index: 3;
+}
+
+/* Scanline sweep across the link */
+.nav-item-secret .nav-link::after{
+  content:"";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    transparent 40%,
+    rgba(110,231,183,.55) 50%,
+    transparent 60%);
+  transform: translateY(-110%);
+  opacity: 0;
+  mix-blend-mode: screen;
+  transition: opacity .2s ease;
+  z-index: 1;
+}
+
+/* Hover — HUD lock-on */
+.nav-item-secret .nav-link:hover{
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(110,231,183,.05) 0 1px,
+      transparent 1px 3px),
+    rgba(34,197,94,.06);
+  border-color: rgba(110,231,183,.55);
+  box-shadow:
+    inset 0 0 24px rgba(110,231,183,.18),
+    0 0 18px -4px rgba(110,231,183,.45);
+  color: #d1fae5;
+}
+.nav-item-secret .nav-link:hover::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.nav-item-secret .nav-link:hover::after{
+  opacity: 1;
+  animation: nav-scan 1.6s linear infinite;
+}
+.nav-item-secret .nav-link:hover i{
+  animation: nav-icon-tick .55s steps(2, jump-end) infinite;
+  color: #a7f3d0;
+  text-shadow:
+    0 0 12px rgba(110,231,183,1),
+    0 0 28px rgba(34,197,94,.8);
+}
+.nav-item-secret .nav-link:hover span{
+  color: #ecfdf5;
+  letter-spacing: 2px;
+  animation: nav-chromatic 1.8s ease-in-out infinite;
+}
+
+.nav-item-secret.active .nav-link{
+  background: linear-gradient(90deg, rgba(34,197,94,.18), rgba(110,231,183,.08) 60%, transparent);
+  border-color: rgba(110,231,183,.4);
+  box-shadow: inset 2px 0 0 #6ee7b7;
+  color: #ecfdf5;
+}
+.nav-item-secret.active .nav-link i{ color: #a7f3d0; }
+
+@keyframes nav-secret-flicker{
+  0%, 91%, 100% { opacity: 1; }
+  92%           { opacity: .35; }
+  93%           { opacity: 1; }
+  94%           { opacity: .55; }
+  95%           { opacity: 1; }
+}
+@keyframes nav-scan{
+  0%   { transform: translateY(-110%); }
+  100% { transform: translateY(110%); }
+}
+@keyframes nav-icon-tick{
+  0%, 100% { transform: scale(1.18); }
+  50%      { transform: scale(1.02); }
+}
+@keyframes nav-chromatic{
+  0%, 100% {
+    text-shadow:
+      -1px 0 rgba(255,59,84,.7),
+      1px 0 rgba(56,189,248,.7),
+      0 0 8px rgba(110,231,183,.6);
+  }
+  50% {
+    text-shadow:
+      -2px 0 rgba(255,59,84,.85),
+      2px 0 rgba(56,189,248,.85),
+      0 0 14px rgba(110,231,183,.9);
+  }
+}
+
 /* Toggle — floating circle on the sidebar's right edge */
 .sidebar .toggle{
   appearance: none;
