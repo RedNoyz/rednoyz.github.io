@@ -59,93 +59,71 @@
   </aside>
 
   <main class="main">
-    <header class="page-header">
-      <h1 class="page-title">Personal Projects</h1>
-      <p class="page-subtitle muted">A curated list of tools, experiments, and builds — most are works in progress.</p>
-    </header>
+    <section class="coming-soon-card" aria-labelledby="cs-title">
+      <div class="cs-stage" aria-hidden="true">
+        <div class="cs-ring cs-ring-1"></div>
+        <div class="cs-ring cs-ring-2"></div>
+        <div class="cs-ring cs-ring-3"></div>
+        <div class="cs-core">
+          <i class="bx bx-code-alt" aria-hidden="true"></i>
+        </div>
+        <span class="cs-spark cs-spark-1"></span>
+        <span class="cs-spark cs-spark-2"></span>
+        <span class="cs-spark cs-spark-3"></span>
+        <span class="cs-spark cs-spark-4"></span>
+      </div>
 
-    <section class="project-grid">
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-pulse" aria-hidden="true"></i></div>
-          <span class="status-chip in-progress">In progress</span>
-        </div>
-        <h3 class="project-title">Test Pulse</h3>
-        <p class="project-desc">Lightweight Python toolkit that turns Jira + TM4J data into a daily QA-health snapshot delivered to Slack.</p>
-        <div class="tag-row">
-          <span class="tag">Python</span>
-          <span class="tag">Jira API</span>
-          <span class="tag">Slack</span>
-        </div>
-      </article>
+      <div class="cs-content">
+        <span class="cs-eyebrow"><span class="cs-dot"></span>Lab in progress</span>
 
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-data" aria-hidden="true"></i></div>
-          <span class="status-chip planned">Planned</span>
-        </div>
-        <h3 class="project-title">Telemetry Sentinel</h3>
-        <p class="project-desc">SQL-driven validator that flags drift, schema breaks, and missing events across BigQuery telemetry tables.</p>
-        <div class="tag-row">
-          <span class="tag">BigQuery</span>
-          <span class="tag">SQL</span>
-          <span class="tag">dbt</span>
-        </div>
-      </article>
+        <h1 id="cs-title" class="cs-title" data-text="Coming Soon">Coming Soon</h1>
 
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i></div>
-          <span class="status-chip exploring">Exploring</span>
-        </div>
-        <h3 class="project-title">QA Compass</h3>
-        <p class="project-desc">Power BI dashboard template kit — opinionated visuals for bug flow, release readiness, and team capacity.</p>
-        <div class="tag-row">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-        </div>
-      </article>
+        <p class="cs-tagline">
+          The lab&rsquo;s sealed while I rebuild it from scratch &mdash; tooling, dashboards,
+          and AI assistants designed to make QA faster, sharper, and a lot more fun.
+        </p>
 
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-bot" aria-hidden="true"></i></div>
-          <span class="status-chip in-progress">In progress</span>
+        <div class="cs-status" role="status" aria-live="polite">
+          <span class="cs-status-prefix">&gt;</span>
+          <span class="cs-status-cycle">
+            <span>compiling thoughts</span>
+            <span>brewing prototypes</span>
+            <span>wiring up AI agents</span>
+            <span>polishing pixels</span>
+          </span>
+          <span class="cs-cursor" aria-hidden="true"></span>
         </div>
-        <h3 class="project-title">Triage Bot</h3>
-        <p class="project-desc">Small CLI that auto-labels and routes incoming bug reports based on title, repro, and component heuristics.</p>
-        <div class="tag-row">
-          <span class="tag">Python</span>
-          <span class="tag">LLM</span>
-          <span class="tag">CLI</span>
-        </div>
-      </article>
 
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-grid-alt" aria-hidden="true"></i></div>
-          <span class="status-chip exploring">Exploring</span>
+        <div class="cs-progress" aria-label="Build progress">
+          <span class="cs-progress-label">Build</span>
+          <div class="cs-progress-bar"><span></span></div>
+          <span class="cs-progress-pct">~67%</span>
         </div>
-        <h3 class="project-title">Release Radar</h3>
-        <p class="project-desc">Looker block library for live-ops teams — release-by-release deltas in retention, monetization, and crash rate.</p>
-        <div class="tag-row">
-          <span class="tag">Looker</span>
-          <span class="tag">LookML</span>
-        </div>
-      </article>
 
-      <article class="project-card">
-        <div class="project-head">
-          <div class="project-icon"><i class="bx bx-globe" aria-hidden="true"></i></div>
-          <span class="status-chip in-progress">In progress</span>
+        <div class="cs-locked-grid" aria-hidden="true">
+          <div class="cs-locked-card">
+            <i class="bx bx-lock-alt" aria-hidden="true"></i>
+            <span>Classified</span>
+          </div>
+          <div class="cs-locked-card">
+            <i class="bx bx-lock-alt" aria-hidden="true"></i>
+            <span>Classified</span>
+          </div>
+          <div class="cs-locked-card">
+            <i class="bx bx-lock-alt" aria-hidden="true"></i>
+            <span>Classified</span>
+          </div>
         </div>
-        <h3 class="project-title">rednoyz.github.io</h3>
-        <p class="project-desc">This very site — a hand-built static portfolio. Iterating on visuals, copy, and structure in public.</p>
-        <div class="tag-row">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JS</span>
+
+        <div class="cs-actions">
+          <a class="btn btn-primary" href="index.html">
+            <i class="bx bx-home" aria-hidden="true"></i> Back home
+          </a>
+          <a class="btn btn-ghost" href="roles-responsibilities.html">
+            <i class="bx bx-book-open" aria-hidden="true"></i> See my roles
+          </a>
         </div>
-      </article>
+      </div>
     </section>
 
     <footer class="footer">
