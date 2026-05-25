@@ -1239,9 +1239,10 @@ textarea{ resize: vertical; min-height: 140px; }
 .cs-title{
   position: relative;
   margin: 4px 0 0;
+  padding-bottom: .12em;
   font-weight: 800;
   font-size: clamp(48px, 10vw, 104px);
-  line-height: .95;
+  line-height: 1.05;
   letter-spacing: -2px;
   background: var(--gradient-text);
   -webkit-background-clip: text; background-clip: text;
