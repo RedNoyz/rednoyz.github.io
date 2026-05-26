@@ -1596,6 +1596,12 @@ textarea{ resize: vertical; min-height: 140px; }
   .grid > .card.span-6 { grid-column: span 6; }
   .grid > .card.span-8 { grid-column: span 8; }
   .grid > .card.span-12{ grid-column: span 12; }
+  /* 5 of 12 columns, horizontally centered within the grid (gap: 16px) */
+  .grid > .card.span-5 {
+    grid-column: 1 / -1;
+    width: calc((100% - 176px) * 5 / 12 + 64px);
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 720px){
